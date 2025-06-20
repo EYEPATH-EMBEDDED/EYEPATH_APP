@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- 프로필 이미지 -->
+        <ImageView
+            android:id="@+id/avatar_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/hocha"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_backgroud" />
+
+        <!-- 사용자 정보 묶음 -->
+        <LinearLayout
+            android:id="@+id/view_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/rounded_box"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="홍길동"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/text_userid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@userId"
+                android:textSize="18sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="2dp" />
+
+            <TextView
+                android:id="@+id/text_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email@example.com"
+                android:textSize="18sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/text_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="010-0000-0000"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- 신체 정보 묶음 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/rounded_box">
+
+            <TextView
+                android:id="@+id/text_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20세"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/text_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="170cm"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- 수정 버튼 -->
+        <Button
+            android:id="@+id/button_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수정하기"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#6200EE"
+            android:textColor="@android:color/white" />
+
+        <!-- 수정 모드 (초기에는 안 보임) -->
+        <LinearLayout
+            android:id="@+id/edit_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="16dp"
+            android:background="@drawable/rounded_box"
+            android:layout_marginTop="24dp">
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="전화번호"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/edit_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="나이"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/edit_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="키(cm)"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="저장"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#009688"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

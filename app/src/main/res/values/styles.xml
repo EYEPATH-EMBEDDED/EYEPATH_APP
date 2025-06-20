@@ -1,0 +1,19 @@
+<resources>
+    <!-- 기존 Theme 정의가 있을 수 있으니 그 아래에 추가 -->
+
+    <!-- Label 스타일 -->
+    <style name="Label">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#0053b3</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <!-- Info 스타일 -->
+    <style name="Info">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+
+</resources>
